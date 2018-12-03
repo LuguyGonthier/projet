@@ -4,7 +4,8 @@
 #include <ctype.h>
 
 int scanInt(char* ch){
-	int t=0;
+	int t = 0;
+	
 	while (1)
 	{
 		printf("\n%s=",ch);
@@ -19,8 +20,7 @@ int scanInt(char* ch){
 	return t;
 }
 
-double scandv(char* ch)
-{
+double scandv(char* ch){
 	double dv=0;
 	while (1)
 	{
@@ -36,8 +36,7 @@ double scandv(char* ch)
 	return dv;
 }
 
-Point scanPoint()
-{
+Point scanPoint(){
 	printf("\nEntrez les coordonnees du point initiale de trajectoire (x0, y0, z0)\n");
 
 	Point pt=initPoint(scandv("x0"),scandv("y0"), scandv("z0"));
@@ -45,8 +44,7 @@ Point scanPoint()
 	return pt;
 }
 
-Parametres scanParam()
-{
+Parametres scanParam(){
 	printf("\nEntrez la valeur de l'increment de temps dt puis celle du temps maximale Tmax\n");
 
 	
