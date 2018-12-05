@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 void Creation_Fichier(char * FICHIER)
 { 
     FILE*f = NULL;

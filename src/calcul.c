@@ -9,6 +9,20 @@ struct Coordonnees_s
 };
 typedef struct Coordonnees_s Coordonnees;
 
+void Creation_Coordo_Initial(Coordonnees* coordo)
+{
+	printf("Entrez les positions initiales\n");
+	
+	printf("X0 : ");
+	scanf ("%f",&coordo->x);
+	printf("\n");
+	printf("Y0 : ");
+	scanf ("%f",&coorde->y);
+	printf("\n");
+	printf("Z0 : ");
+	scanf ("%f",&coordo->z);
+	printf("\n");
+}
 
 void Position_Suivante(float *X, float *Y, float *Z, float dt)
 {
