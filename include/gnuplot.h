@@ -1,0 +1,1 @@
+void Trace_gnuplot(char * FICHIER);
