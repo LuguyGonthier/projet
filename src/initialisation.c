@@ -7,14 +7,6 @@
 #define TMAX 1000
 #define TMIN 10
 
-struct Coordo_s
-{
-	float x;
-	float y;
-	float z;
-};
-typedef struct Coordo_s Coordo;
-
 struct Parametre_s
 {
 	float sigma;

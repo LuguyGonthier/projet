@@ -6,5 +6,6 @@
 
 int main ( int argc , char * argv [ ] )
 {
-    
+    Parametre parametreBase;
+    Creation_Parametre(&parametreBase);
 }
