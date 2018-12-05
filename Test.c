@@ -2,9 +2,20 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#define DT_MAX 0.1
+#define DT_MIN 0.0001
+#define TMAX 1000
+#define TMIN 10
 
-typedef struct Parametre Parametre;
-struct Parametre
+struct Coordo_s
+{
+	float x;
+	float y;
+	float z;
+};
+typedef struct Coordo_s Coordo;
+
+struct Parametre_s
 {
 	float sigma;
 	float rho;
@@ -12,6 +23,7 @@ struct Parametre
 	float Tmax;
 	float dt;
 };
+typedef struct Parametre_s Parametre;
 
 void Creation_Parametre(Parametre* par)
 {
@@ -19,28 +31,52 @@ void Creation_Parametre(Parametre* par)
 	printf("Entrez les parametres sigma, rho, beta\n");
 	
 	printf("Sigma : ");
-	scanf ("%f",&(par.sigma));
+	scanf ("%f",&par->sigma);
 	printf("\n");
 	printf("Rho : ");
-	scanf ("%f",&(par.rho));
+	scanf ("%f",&par->rho);
 	printf("\n");
 	printf("Beta : ");
-	scanf ("%f",&(par.beta));
+	scanf ("%f",&par->beta);
 	printf("\n");
 	
-	printf("Entrez le Tmax et l'incrementation dt");
+	printf("Entrez le Tmax et l'incrementation dt\n");
 	
 	printf("Tmax : ");
-	scanf ("%f",&(par.Tmax));
+	scanf ("%f",&par->Tmax);
+	if ((*par).Tmax < TMIN)
+	{
+        (*par).Tmax = TMIN;
+    }
+    else
+    {
+        if ((*par).Tmax > TMAX)
+        {
+            (*par).Tmax = TMAX;
+        }
+    }
 	printf("\n");
 	printf("dt : ");
-	scanf ("%f",&(par.dt));
+	scanf ("%f",&par->dt);
+		if ((*par).dt < DT_MIN)
+	{
+        (*par).dt = DT_MIN;
+    }
+    else
+    {
+        if ((*par).dt > DT_MAX)
+        {
+            (*par).dt = DT_MAX;
+        }
+    }
+    printf("\n");
 }
 
 int main ( int argc , char * argv [ ] )
 {
-    Parametre par ;
-    Creation_Parametre(&par);
+    Parametre parametreBase;
+    Creation_Parametre(&parametreBase);
     
-    printf("%f,%f,%f,%f,%f",par.sigma, par.rho, par.beta, par.Tmax, par.dt);
+    printf ("%f,   %f,   %f,   %f,   %f",parametreBase.sigma, parametreBase.rho, parametreBase.beta, parametreBase.dt, parametreBase.Tmax);
+    
 }
