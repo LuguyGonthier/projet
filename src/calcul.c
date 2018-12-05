@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include "../include/trajec.h"
-
+#include "../include/calcul.h"
 struct Coordonnees_s
 {
     float x;
@@ -17,7 +16,7 @@ void Creation_Coordo_Initial(Coordonnees* coordo)
 	scanf ("%f",&coordo->x);
 	printf("\n");
 	printf("Y0 : ");
-	scanf ("%f",&coorde->y);
+	scanf ("%f",&coordo->y);
 	printf("\n");
 	printf("Z0 : ");
 	scanf ("%f",&coordo->z);

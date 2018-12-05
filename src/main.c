@@ -2,7 +2,10 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-
+#include "../include/calcul.h"
+#include "../include/fichier.h"
+#include "../include/gnuplot.h"
+#include "../include/initialisation.h"
 
 int main ( int argc , char * argv [ ] )
 {
@@ -22,12 +25,12 @@ int main ( int argc , char * argv [ ] )
 	
     Ecriture_Fichier(fichier,T,coordo.x,coordo;y,coordo.z);
 
-    while(T < parametreBase.Tmax )
+    while (T < parametreBase.Tmax )
     {
         Position_Suivante(coordo.x,coordo;y,coordo.z,parametreBase.dt);
         Ecriture_Fichier(fichier,T,coordo.x,coordo;y,coordo.z);
         T=T+facteur;
     }
     
-    Trace_gnuplot(Fichier)
+    Trace_gnuplot(Fichier);
 }

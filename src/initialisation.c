@@ -6,6 +6,7 @@
 #define DT_MIN 0.0001
 #define TMAX 1000
 #define TMIN 10
+#include "../include/initialisation.h"
 
 struct Parametre_s
 {
