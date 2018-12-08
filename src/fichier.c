@@ -10,7 +10,5 @@ void Creation_Fichier(char * fichier)
 }
 void Ecriture_Fichier(FILE* fichier, float t, float x, float  y, float z)
 { 
-    FILE* f;
-    fprintf(f, "%f %f %f %f\n", t, x, y, z);
-    fclose(f);
+    fprintf(fichier, "%f %f %f %f\n", t, x, y, z);
 }

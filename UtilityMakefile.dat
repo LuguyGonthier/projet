@@ -1,8 +1,0 @@
-Makefile
-fichier but : fichier necessaire commande pour faire le but en partant des fichiers necessaires
-
-CREATION
-gcc -c mod1.c
-gcc -c mod2.c
-ar rcs libtutu.a  mod1.o mod2.o
-gcc -o titi titi.c -ltutu

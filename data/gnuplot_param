@@ -2,9 +2,10 @@ set parametric
 set terminal png
 set output "../lorenz.png"
 
-
 color1 = -50/360.0
 color2 = 227/360.0
 set palette model HSV functions (1-gray)*(color2-color1)+color1,1,0.68
 
 splot "../data/position.dat" u 2:3:4:1 w l lc palette
+
+

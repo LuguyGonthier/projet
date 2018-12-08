@@ -13,17 +13,20 @@ int main ( int argc , char * argv [ ] )
     Coordonnees coordo;
     Creation_Parametre(&parametreBase);
     Creation_Coordo_Initial(&coordo);
+    
     char Fichier[69]="../data/position.dat";
     float T = 0;
     float facteur = (parametreBase.Tmax)/(parametreBase.dt);
     
     Creation_Fichier(Fichier);
     
+    FILE* f = NULL;
+    f = fopen(Fichier,"a");
+    
     while (T < parametreBase.Tmax )
     {
         Position_Suivante(&coordo.x,&coordo.y,&coordo.z,parametreBase.dt);
-        FILE* f = NULL;
-        f = fopen(Fichier,"a");
+
         Ecriture_Fichier(f,T,coordo.x,coordo.y,coordo.z);
         T=T+facteur;
     }
