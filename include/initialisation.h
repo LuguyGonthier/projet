@@ -7,6 +7,14 @@
 #define TMAX 1000
 #define TMIN 10
 
+struct Parametre_s
+{
+	float sigma;
+	float rho;
+	float beta;
+	float Tmax;
+	float dt;
+};
 typedef struct Parametre_s Parametre;
 
 void Creation_Parametre(Parametre* par);
