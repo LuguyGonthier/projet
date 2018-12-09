@@ -7,8 +7,7 @@
 #include "../include/gnuplot.h"
 #include "../include/initialisation.h"
 
-int main ( int argc , char * argv [ ] )
-{
+int main ( int argc , char * argv [ ] ){
     Parametre parametreBase;
     Coordonnees coordo;
     Creation_Parametre(&parametreBase);
@@ -16,8 +15,6 @@ int main ( int argc , char * argv [ ] )
     
     char Fichier[69]="../data/position.dat";
     float T = 0;
-    float facteur = (parametreBase.Tmax)/(parametreBase.dt);
-    
     Creation_Fichier(Fichier);
     
     FILE* f = NULL;
@@ -28,7 +25,10 @@ int main ( int argc , char * argv [ ] )
         Position_Suivante(&coordo.x,&coordo.y,&coordo.z,parametreBase.dt);
 
         Ecriture_Fichier(f,T,coordo.x,coordo.y,coordo.z);
-        T=T+facteur;
+        T=T+parametreBase.dt;
     }
+    
     Trace_gnuplot(Fichier);
+    
+    return 0;
 }
