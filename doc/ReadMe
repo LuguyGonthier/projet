@@ -1,0 +1,11 @@
+Bonjour utilisateur
+
+Voici comment utiliser notre programme efficacement ->
+
+-Etant dans le workspace, utiliser la commande "cd projet/" pour rentrer dans le dossier projet
+-Taper "make all" pour executer notre makefile qui va compiler tous le codes sources.
+-Entrer dans le sous repertoir bin en tapant "cd bin/"
+-Exécuter a present l'executeur en tapant "./lorenz.exe"
+-Avec le curseur de l'ecran ouvrir le fichier lorenz.png dans le repertoire projet
+
+ENJOY !!!!!
