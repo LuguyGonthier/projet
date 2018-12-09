@@ -20,8 +20,7 @@ int main ( int argc , char * argv [ ] ){
     FILE* f = NULL;
     f = fopen(Fichier,"a");
     
-    while (T < parametreBase.Tmax )
-    {
+    while (T < parametreBase.Tmax ){
         Position_Suivante(&coordo.x,&coordo.y,&coordo.z,parametreBase.dt);
 
         Ecriture_Fichier(f,T,coordo.x,coordo.y,coordo.z);

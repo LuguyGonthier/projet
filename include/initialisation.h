@@ -7,8 +7,7 @@
 #define TMAX 1000
 #define TMIN 10
 
-struct Parametre_s
-{
+struct Parametre_s{
 	float sigma;
 	float rho;
 	float beta;

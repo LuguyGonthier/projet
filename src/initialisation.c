@@ -8,8 +8,7 @@
 #define TMIN 10
 #include "../include/initialisation.h"
 
-void Creation_Parametre(Parametre* par)
-{
+void Creation_Parametre(Parametre* par){
 	
 	printf("Entrez les parametres sigma, rho, beta\n");
 	
