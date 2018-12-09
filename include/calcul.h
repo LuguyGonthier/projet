@@ -8,6 +8,6 @@ struct Coordonnees_s
 };
 typedef struct Coordonnees_s Coordonnees;
 
-void Creation_Coordo_Initial(Coordonnees* coordo);
+void Creation_Coordo_Initial(Coordonnees *coordo);
 
-void Position_Suivante(float *X, float *Y, float *Z, float dt);
+void Position_Suivante(float X, float Y, float Z, float sigma, float rho, float beta, float dt);

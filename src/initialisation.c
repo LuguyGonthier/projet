@@ -8,9 +8,10 @@
 #define TMIN 10
 #include "../include/initialisation.h"
 
-void Creation_Parametre(Parametre* par)
+void Creation_Parametre(Parametre *par)
 {
 	
+	par = malloc(sizeof(struct Parametre_s));
 	printf("Entrez les parametres sigma, rho, beta\n");
 	
 	printf("Sigma : ");
